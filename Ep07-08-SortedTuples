@@ -1,0 +1,8 @@
+twit_tuples = [
+    ('Padre', 'TWiET', 72),
+    ('Snubs', 'C101', 22),
+    ('Bryan', 'KnowHow', 6),
+]
+print sorted(twit_tuples, key=lambda twit: twit[2])   # sort by the third field in each tuple: age
+
+
