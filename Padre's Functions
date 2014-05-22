@@ -1,0 +1,69 @@
+#----------------------------------------------------------------------------------
+# This function will calculate all the nubers in a Fibonacci series from 0 to input
+# Math from the Python Doc Resource Pages
+
+def fib(input):
+     a, b = 0, 1
+     while a < input:
+         print a,
+         a, b = b, a+b
+
+#----------------------------------------------------------------------------------
+#This function will calculate if input is an even or odd number
+         
+def oddeven(input):
+    leftover = input % 2
+    if leftover == 0:
+       print input, "is an even number"
+    else:
+       print input, "is an odd number"
+
+#----------------------------------------------------------------------------------
+# This function will take sanitize input from the user
+
+def sanitize():
+    clean = 0
+    while clean == 0:
+        dirtyinput = raw_input("Please enter a number: ")
+        if dirtyinput.isdigit():
+            clean = 1
+        else:
+            print "That is not a valid number: "
+            
+    # This line converts the string into an integer      
+    cleaninput = int(dirtyinput)
+
+    #This returns the clean value
+    return cleaninput
+
+#----------------------------------------------------------------------------------
+    
+def main():
+    # This calls the "sanitize" function to get CLEAN input from the user
+    calculate = sanitize()
+    exit = 0
+    while exit == 0:
+        print "|=========================================|"
+        print "|Welcome to Padre's Useless Number Thingy!|"
+        print "|=========================================|"
+        print "| 1: Calculate the Fibonacci Series       |"
+        print "| 2: Tell me if the number is odd or even |"
+        print "| 3: Exit                                 |"
+        print "|=========================================|"
+
+        menu = raw_input("Please make your selection: ")
+        if menu == "1":
+            # Pass the clean input to the fibonacci function
+            fib(calculate)
+            print ""
+        elif menu == "2":
+            # Pass the clean input to the odd/even function
+            oddeven(calculate)
+        elif menu == "3":
+            exit = 1
+        else:
+            print "That is not a valid input"
+
+#----------------------------------------------------------------------------------
+
+main()
