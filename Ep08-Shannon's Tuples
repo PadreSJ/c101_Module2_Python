@@ -1,0 +1,11 @@
+guest_tuples = [
+	('Shannon', 1, 'Filet Mignon'),
+	('Keith', 1, 'Filet Mignon'),
+	('Mrs. Kaufman', 2, 'Chicken'),
+	('Mr. Kaufman', 2, 'Filet Mignon'),
+	('Mr. Morse', 3, 'Chicken'),
+	('Mrs. Morse', 3, 'Vegetarian'),
+]
+print sorted(guest_tuples, key=lambda guest: guest[1]) #sorts by table option
+
+raw_input("Press Enter to Continue")
